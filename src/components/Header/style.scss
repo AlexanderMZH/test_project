@@ -106,28 +106,30 @@
 }
 
 .burgerMenu {
-  position: absolute;
+  position: fixed;
   left: 20px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  z-index: 1;
+
   cursor: pointer;
 
   display: none;
   div {
     width: 30px;
-    height: 2.5px;
+    height: 4px;
     background-color: black;
     &:not(:last-child) {
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
   }
 }
 
 .nemuModal {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   background-color: #f6f6f6;
@@ -142,13 +144,14 @@
 .header.responsiveHeader {
   .search {
     width: 270px;
-    position: absolute;
+    position: fixed;
     left: 5px;
+    top: 10px;
     z-index: 2;
     display: block;
   }
   .socials {
-    position: absolute;
+    position: fixed;
     left: 5px;
     top: 70px;
     z-index: 2;

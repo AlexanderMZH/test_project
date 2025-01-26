@@ -24,11 +24,13 @@ import LearnMoreCard from "@/components/LearnMoreCard/LearnMoreCard";
 export default function Home() {
   const [headerResponsive, setHeaderResponsive] = useState("");
 
+  // this is for header menu toggle
+
   const handleHeaderResponsive = (identity) => {
+    setHeaderResponsive("");
+
     if (identity === "burger") {
       setHeaderResponsive("responsiveHeader");
-    } else {
-      setHeaderResponsive("");
     }
   };
 
@@ -39,123 +41,124 @@ export default function Home() {
         handleResponsive={handleHeaderResponsive}
       />
       <div
-        className={styles.mainContentcontainer}
         onClick={() => {
           handleHeaderResponsive("body");
         }}
       >
-        <div className={styles.mainContent}>
-          <div className={styles.mainContentStatistick}>
-            <div className={styles.buyMemes}>
-              <div className={styles.memeText}>
-                <h1>Buy Memes.</h1>
-                <h1>In Two Clicks.</h1>
+        <div className={styles.mainContentcontainer}>
+          <div className={styles.mainContent}>
+            <div className={styles.mainContentStatistick}>
+              <div className={styles.buyMemes}>
+                <div className={styles.memeText}>
+                  <h1>Buy Memes.</h1>
+                  <h1>In Two Clicks.</h1>
+                </div>
+                <div className={styles.memeSubText}>
+                  <span>The fastest way to buy memes in just two clicks.</span>
+                  <span>Under 1 minute to sign up and no wallet needed. </span>
+                </div>
               </div>
-              <div className={styles.memeSubText}>
-                <span>The fastest way to buy memes in just two clicks.</span>
-                <span>Under 1 minute to sign up and no wallet needed. </span>
+              <div className={styles.statistick}>
+                <StatistickCard
+                  header={"total users"}
+                  quantity={"52,630"}
+                  icon={Users}
+                />
+                <StatistickCard
+                  header={"trade volume"}
+                  quantity={"1,288,314,266"}
+                />
               </div>
             </div>
-            <div className={styles.statistick}>
-              <StatistickCard
-                header={"total users"}
-                quantity={"52,630"}
-                icon={Users}
-              />
-              <StatistickCard
-                header={"trade volume"}
-                quantity={"1,288,314,266"}
-              />
+
+            <MarketCapCard
+              isBig={true}
+              backgroundColor={"brown"}
+              tickIcon={Vector}
+              name={"virtual"}
+              capShifts={"0.59%"}
+              price={"$2.74"}
+              volume={"$1.7B"}
+              marketDynamics={"up"}
+            />
+          </div>
+        </div>
+        <div className={styles.hotMarketContainer}>
+          <div className={styles.hotMarketContent}>
+            <div className={styles.hotMarketHeader}>
+              <h1>hottest</h1>
+            </div>
+            <div className={styles.hotMarketCardsContainer}>
+              <ul>
+                <li>
+                  <MarketCapCard
+                    icon={MarketCapGreen}
+                    isBig={false}
+                    name={"virtual"}
+                    capShifts={"0.59%"}
+                    price={"$2.74"}
+                    volume={"$1.7B"}
+                    marketDynamics={"up"}
+                  />
+                </li>
+                <li>
+                  <MarketCapCard
+                    icon={MarketCapPeople}
+                    isBig={false}
+                    name={"ai16z"}
+                    capShifts={"11.59%"}
+                    price={"$0.0873"}
+                    volume={"$962k"}
+                    marketDynamics={"down"}
+                    tickIcon={Vector}
+                  />
+                </li>
+                <li>
+                  <MarketCapCard
+                    isBig={false}
+                    name={"ticker3"}
+                    price={"$0.1232"}
+                    volume={"$701M"}
+                    tickIcon={Vector}
+                    backgroundColor={"black"}
+                  />
+                </li>
+                <li>
+                  <MarketCapCard
+                    icon={MarketCapPurple}
+                    isBig={false}
+                    name={"ticker4"}
+                    price={"$25.51"}
+                    volume={"$988"}
+                  />
+                </li>
+              </ul>
             </div>
           </div>
-
-          <MarketCapCard
-            isBig={true}
-            backgroundColor={"brown"}
-            tickIcon={Vector}
-            name={"virtual"}
-            capShifts={"0.59%"}
-            price={"$2.74"}
-            volume={"$1.7B"}
-            marketDynamics={"up"}
-          />
         </div>
-      </div>
-      <div className={styles.hotMarketContainer}>
-        <div className={styles.hotMarketContent}>
-          <div className={styles.hotMarketHeader}>
-            <h1>hottest</h1>
-          </div>
-          <div className={styles.hotMarketCardsContainer}>
-            <ul>
-              <li>
-                <MarketCapCard
-                  icon={MarketCapGreen}
-                  isBig={false}
-                  name={"virtual"}
-                  capShifts={"0.59%"}
-                  price={"$2.74"}
-                  volume={"$1.7B"}
-                  marketDynamics={"up"}
-                />
-              </li>
-              <li>
-                <MarketCapCard
-                  icon={MarketCapPeople}
-                  isBig={false}
-                  name={"ai16z"}
-                  capShifts={"11.59%"}
-                  price={"$0.0873"}
-                  volume={"$962k"}
-                  marketDynamics={"down"}
-                  tickIcon={Vector}
-                />
-              </li>
-              <li>
-                <MarketCapCard
-                  isBig={false}
-                  name={"ticker3"}
-                  price={"$0.1232"}
-                  volume={"$701M"}
-                  tickIcon={Vector}
-                  backgroundColor={"black"}
-                />
-              </li>
-              <li>
-                <MarketCapCard
-                  icon={MarketCapPurple}
-                  isBig={false}
-                  name={"ticker4"}
-                  price={"$25.51"}
-                  volume={"$988"}
-                />
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
 
-      <div className={styles.LearMoreContainer}>
-        <div className={styles.LearMoreContent}>
-          <div className={styles.LearMoreHeader}>
-            <h1>Learn more</h1>
-          </div>
+        <div className={styles.LearMoreContainer}>
+          <div className={styles.LearMoreContent}>
+            <div className={styles.LearMoreHeader}>
+              <h1>Learn more</h1>
+            </div>
 
-          <div className={styles.learnMoreCards}>
-            <ul>
-              <li>
-                <LearnMoreCard icon={LearnMoreAbout} />
-              </li>
-              <li>
-                <LearnMoreCard icon={LearnMoreBlog} />
-              </li>
-              <li>
-                <LearnMoreCard icon={LearnMoreSE} />
-              </li>
-              <li>
-                <LearnMoreCard icon={LearnMoreTBD} />
-              </li>
-            </ul>
+            <div className={styles.learnMoreCards}>
+              <ul>
+                <li>
+                  <LearnMoreCard icon={LearnMoreAbout} />
+                </li>
+                <li>
+                  <LearnMoreCard icon={LearnMoreBlog} />
+                </li>
+                <li>
+                  <LearnMoreCard icon={LearnMoreSE} />
+                </li>
+                <li>
+                  <LearnMoreCard icon={LearnMoreTBD} />
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
