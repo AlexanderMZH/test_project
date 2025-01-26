@@ -1,0 +1,180 @@
+.mainContentcontainer {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .mainContent {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    .mainContentStatistick {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .buyMemes {
+        .memeText {
+          font-size: 30px;
+          line-height: 1;
+        }
+        .memeSubText {
+          display: flex;
+          flex-direction: column;
+          font-size: 22px;
+          margin: 20px 0;
+        }
+      }
+
+      .statistick {
+        width: 100%;
+        display: flex;
+      }
+    }
+  }
+}
+
+.hotMarketContainer {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .hotMarketContent {
+    width: 80%;
+
+    margin-top: 50px;
+    text-transform: capitalize;
+
+    .hotMarketHeader {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.hotMarketCardsContainer {
+  padding: 20px 0;
+
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      list-style-type: none;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.LearMoreContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .LearMoreContent {
+    width: 80%;
+
+    .LearMoreHeader {
+      margin: 30px 0 20px 0;
+    }
+
+    .learnMoreCards {
+      padding: 10px 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        li {
+          list-style-type: none;
+          &:not(:last-child) {
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  .mainContentcontainer {
+    .mainContent {
+      width: 90%;
+      .mainContentStatistick {
+        .buyMemes {
+          .memeText {
+            font-size: 27px;
+          }
+          .memeSubText {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .hotMarketContainer {
+    .hotMarketContent {
+      width: 90%;
+    }
+  }
+
+  .LearMoreContainer {
+    .LearMoreContent {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .mainContentcontainer {
+    .mainContent {
+      .mainContentStatistick {
+        .buyMemes {
+          padding-right: 5px;
+        }
+
+        .statistick {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .mainContentcontainer {
+    .mainContent {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      .mainContentStatistick {
+        .buyMemes {
+          .memeText {
+            font-size: 20px;
+          }
+          .memeSubText {
+            font-size: 15px;
+          }
+        }
+
+        .statistick {
+          display: none;
+        }
+      }
+    }
+  }
+}
