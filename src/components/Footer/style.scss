@@ -19,6 +19,7 @@
       li {
         list-style-type: none;
         margin: 10px;
+        cursor: pointer;
       }
     }
   }
@@ -33,6 +34,8 @@
     align-items: center;
 
     li {
+      cursor: pointer;
+
       list-style-type: none;
 
       .footerSocialIcons {

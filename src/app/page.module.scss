@@ -91,18 +91,17 @@
     }
 
     .learnMoreCards {
-      padding: 10px 0;
       overflow-x: auto;
       scrollbar-width: none;
       ul {
+        padding: 10px 15px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 15px;
         li {
           list-style-type: none;
           &:not(:last-child) {
-            margin-right: 15px;
+            margin-right: 10px;
           }
         }
       }
@@ -173,6 +172,16 @@
 
         .statistick {
           display: none;
+        }
+      }
+    }
+  }
+
+  .LearMoreContainer {
+    .LearMoreContent {
+      .learnMoreCards {
+        ul {
+          padding: 0;
         }
       }
     }
