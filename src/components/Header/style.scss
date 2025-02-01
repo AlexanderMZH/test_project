@@ -1,6 +1,8 @@
 .header {
-  position: relative;
-  top: 10px;
+  width: 100%;
+
+  position: fixed;
+  top: 0;
 
   padding: 22px;
 
@@ -8,7 +10,12 @@
   justify-content: space-between;
   align-items: center;
 
+  background-color: #fcfcfc;
+
   margin-bottom: 40px;
+
+  z-index: 5;
+
   .logo {
     display: flex;
 
@@ -106,7 +113,7 @@
 }
 
 .burgerMenu {
-  position: fixed;
+  position: absolute;
   left: 20px;
 
   display: flex;

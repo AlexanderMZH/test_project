@@ -16,7 +16,7 @@ const HottestCard = ({
   const boxStyle = {
     width: isBig ? "300px" : "230px",
     height: isBig ? "200px" : "170px",
-    backgroundColor: backgroundColor,
+    backgroundColor: backgroundColor + "!important",
   };
   const marketCapBoxStyle = {
     width: isBig ? "300px" : "230px",
