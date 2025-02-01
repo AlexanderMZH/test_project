@@ -9,13 +9,13 @@ import PcIcon from "@/assets/icons/pcIcon.svg";
 
 import "./style.scss";
 
-const Header = ({ handleResponsive, responsiveHeader }) => {
+const Header = ({ handleBurgerToggle, burgerToggleValue }) => {
   return (
-    <div className={`header ${responsiveHeader}`}>
+    <div className={`header ${burgerToggleValue}`}>
       <div
         className="burgerMenu"
         onClick={() => {
-          handleResponsive("burger");
+          handleBurgerToggle("burger");
         }}
       >
         <div></div>
@@ -30,6 +30,7 @@ const Header = ({ handleResponsive, responsiveHeader }) => {
         <div className="rectangle"></div>
         <div className="triangle"></div>
         <div className="circle"></div>
+        <div className="white-space"></div>
       </div>
 
       <div className="search">

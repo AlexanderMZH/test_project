@@ -4,19 +4,16 @@
   position: fixed;
   top: 0;
 
-  padding: 22px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  background-color: #fcfcfc;
-
+  padding: 22px;
   margin-bottom: 40px;
-
+  background-color: #fff !important;
   z-index: 5;
-
   .logo {
+    position: relative;
     display: flex;
 
     cursor: pointer;
@@ -43,6 +40,16 @@
       width: 10px;
       height: 20px;
       background-color: black;
+    }
+
+    .white-space {
+      position: absolute;
+
+      top: 50%;
+      right: 24%;
+      width: 55px;
+      height: 2px;
+      background-color: #fff;
     }
   }
 
@@ -148,7 +155,7 @@
   display: none;
 }
 
-.header.responsiveHeader {
+.header.burger {
   .search {
     width: 270px;
     position: fixed;

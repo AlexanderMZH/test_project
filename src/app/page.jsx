@@ -22,27 +22,26 @@ import styles from "./page.module.scss";
 import LearnMoreCard from "@/components/LearnMoreCard/LearnMoreCard";
 
 export default function Home() {
-  const [headerResponsive, setHeaderResponsive] = useState("");
+  const [burgerToggle, setBurgerToggle] = useState("");
 
   // this is for header menu toggle
 
-  const handleHeaderResponsive = (identity) => {
-    setHeaderResponsive("");
-
+  const handleBurgerToggle = (identity) => {
+    setBurgerToggle("");
     if (identity === "burger") {
-      setHeaderResponsive("responsiveHeader");
+      setBurgerToggle("burger");
     }
   };
 
   return (
     <>
       <Header
-        responsiveHeader={headerResponsive}
-        handleResponsive={handleHeaderResponsive}
+        burgerToggleValue={burgerToggle}
+        handleBurgerToggle={handleBurgerToggle}
       />
       <div
         onClick={() => {
-          handleHeaderResponsive("body");
+          handleBurgerToggle("none");
         }}
       >
         <div className={styles.mainContentcontainer}>
